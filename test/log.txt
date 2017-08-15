@@ -1,0 +1,293 @@
+
+> webfonts-loader-test@ test /Users/jeerbl/Projets/webfonts-loader/test
+> rimraf ./dist && ava -v ./ava.js && webpack
+
+@font-face {
+	font-family: "myfont";
+	src: url("/app.myfont.95a316263e141be0f383.eot?#iefix") format("embedded-opentype"),
+url("/app.myfont.95a316263e141be0f383.woff") format("woff"),
+url("/app.myfont.95a316263e141be0f383.woff2") format("woff2"),
+url("/app.myfont.95a316263e141be0f383.ttf") format("truetype"),
+url("/app.myfont.95a316263e141be0f383.svg#myfont") format("svg");
+}
+
+@if not variable-exists('webfont-icons') {
+	$webfont-icons: () !global;
+}
+
+$webfont-icons: map-merge($webfont-icons, (
+		'alert': ('myfont' 'f101'),
+		'arrow-down': ('myfont' 'f102'),
+		'arrow-left': ('myfont' 'f103'),
+		'arrow-right': ('myfont' 'f104'),
+		'arrow-small-down': ('myfont' 'f105'),
+		'arrow-small-left': ('myfont' 'f106'),
+		'arrow-small-right': ('myfont' 'f107'),
+		'arrow-small-up': ('myfont' 'f108'),
+		'arrow-up': ('myfont' 'f109'),
+		'beaker': ('myfont' 'f10a'),
+		'bell': ('myfont' 'f10b'),
+		'bold': ('myfont' 'f10c'),
+		'book': ('myfont' 'f10d'),
+		'bookmark': ('myfont' 'f10e'),
+		'briefcase': ('myfont' 'f10f'),
+		'broadcast': ('myfont' 'f110'),
+		'browser': ('myfont' 'f111'),
+		'bug': ('myfont' 'f112'),
+		'calendar': ('myfont' 'f113'),
+		'check': ('myfont' 'f114'),
+		'checklist': ('myfont' 'f115'),
+		'chevron-down': ('myfont' 'f116'),
+		'chevron-left': ('myfont' 'f117'),
+		'chevron-right': ('myfont' 'f118'),
+		'chevron-up': ('myfont' 'f119'),
+		'circle-slash': ('myfont' 'f11a'),
+		'circuit-board': ('myfont' 'f11b'),
+		'clippy': ('myfont' 'f11c'),
+		'clock': ('myfont' 'f11d'),
+		'cloud-download': ('myfont' 'f11e'),
+		'cloud-upload': ('myfont' 'f11f'),
+		'code': ('myfont' 'f120'),
+		'comment-discussion': ('myfont' 'f121'),
+		'comment': ('myfont' 'f122'),
+		'credit-card': ('myfont' 'f123'),
+		'dash': ('myfont' 'f124'),
+		'dashboard': ('myfont' 'f125'),
+		'database': ('myfont' 'f126'),
+		'desktop-download': ('myfont' 'f127'),
+		'device-camera-video': ('myfont' 'f128'),
+		'device-camera': ('myfont' 'f129'),
+		'device-desktop': ('myfont' 'f12a'),
+		'device-mobile': ('myfont' 'f12b'),
+		'diff-added': ('myfont' 'f12c'),
+		'diff-ignored': ('myfont' 'f12d'),
+		'diff-modified': ('myfont' 'f12e'),
+		'diff-removed': ('myfont' 'f12f'),
+		'diff-renamed': ('myfont' 'f130'),
+		'diff': ('myfont' 'f131'),
+		'ellipses': ('myfont' 'f132'),
+		'ellipsis': ('myfont' 'f133'),
+		'eye': ('myfont' 'f134'),
+		'file-binary': ('myfont' 'f135'),
+		'file-code': ('myfont' 'f136'),
+		'file-directory': ('myfont' 'f137'),
+		'file-media': ('myfont' 'f138'),
+		'file-pdf': ('myfont' 'f139'),
+		'file-submodule': ('myfont' 'f13a'),
+		'file-symlink-directory': ('myfont' 'f13b'),
+		'file-symlink-file': ('myfont' 'f13c'),
+		'file-text': ('myfont' 'f13d'),
+		'file-zip': ('myfont' 'f13e'),
+		'file': ('myfont' 'f13f'),
+		'flame': ('myfont' 'f140'),
+		'fold': ('myfont' 'f141'),
+		'gear': ('myfont' 'f142'),
+		'gift': ('myfont' 'f143'),
+		'gist-secret': ('myfont' 'f144'),
+		'gist': ('myfont' 'f145'),
+		'git-branch': ('myfont' 'f146'),
+		'git-commit': ('myfont' 'f147'),
+		'git-compare': ('myfont' 'f148'),
+		'git-merge': ('myfont' 'f149'),
+		'git-pull-request': ('myfont' 'f14a'),
+		'globe': ('myfont' 'f14b'),
+		'grabber': ('myfont' 'f14c'),
+		'graph': ('myfont' 'f14d'),
+		'heart': ('myfont' 'f14e'),
+		'history': ('myfont' 'f14f'),
+		'home': ('myfont' 'f150'),
+		'horizontal-rule': ('myfont' 'f151'),
+		'hubot': ('myfont' 'f152'),
+		'inbox': ('myfont' 'f153'),
+		'info': ('myfont' 'f154'),
+		'issue-closed': ('myfont' 'f155'),
+		'issue-opened': ('myfont' 'f156'),
+		'issue-reopened': ('myfont' 'f157'),
+		'italic': ('myfont' 'f158'),
+		'jersey': ('myfont' 'f159'),
+		'key': ('myfont' 'f15a'),
+		'keyboard': ('myfont' 'f15b'),
+		'law': ('myfont' 'f15c'),
+		'light-bulb': ('myfont' 'f15d'),
+		'link-external': ('myfont' 'f15e'),
+		'link': ('myfont' 'f15f'),
+		'list-ordered': ('myfont' 'f160'),
+		'list-unordered': ('myfont' 'f161'),
+		'location': ('myfont' 'f162'),
+		'lock': ('myfont' 'f163'),
+		'logo-gist': ('myfont' 'f164'),
+		'logo-github': ('myfont' 'f165'),
+		'mail-read': ('myfont' 'f166'),
+		'mail-reply': ('myfont' 'f167'),
+		'mail': ('myfont' 'f168'),
+		'mark-github': ('myfont' 'f169'),
+		'markdown': ('myfont' 'f16a'),
+		'megaphone': ('myfont' 'f16b'),
+		'mention': ('myfont' 'f16c'),
+		'milestone': ('myfont' 'f16d'),
+		'mirror': ('myfont' 'f16e'),
+		'mortar-board': ('myfont' 'f16f'),
+		'mute': ('myfont' 'f170'),
+		'no-newline': ('myfont' 'f171'),
+		'note': ('myfont' 'f172'),
+		'octoface': ('myfont' 'f173'),
+		'organization': ('myfont' 'f174'),
+		'package': ('myfont' 'f175'),
+		'paintcan': ('myfont' 'f176'),
+		'pencil': ('myfont' 'f177'),
+		'person': ('myfont' 'f178'),
+		'pin': ('myfont' 'f179'),
+		'plug': ('myfont' 'f17a'),
+		'plus-small': ('myfont' 'f17b'),
+		'plus': ('myfont' 'f17c'),
+		'primitive-dot': ('myfont' 'f17d'),
+		'primitive-square': ('myfont' 'f17e'),
+		'project': ('myfont' 'f17f'),
+		'pulse': ('myfont' 'f180'),
+		'question': ('myfont' 'f181'),
+		'quote': ('myfont' 'f182'),
+		'radio-tower': ('myfont' 'f183'),
+		'reply': ('myfont' 'f184'),
+		'repo-clone': ('myfont' 'f185'),
+		'repo-force-push': ('myfont' 'f186'),
+		'repo-forked': ('myfont' 'f187'),
+		'repo-pull': ('myfont' 'f188'),
+		'repo-push': ('myfont' 'f189'),
+		'repo': ('myfont' 'f18a'),
+		'rocket': ('myfont' 'f18b'),
+		'rss': ('myfont' 'f18c'),
+		'ruby': ('myfont' 'f18d'),
+		'screen-full': ('myfont' 'f18e'),
+		'screen-normal': ('myfont' 'f18f'),
+		'search': ('myfont' 'f190'),
+		'server': ('myfont' 'f191'),
+		'settings': ('myfont' 'f192'),
+		'shield': ('myfont' 'f193'),
+		'sign-in': ('myfont' 'f194'),
+		'sign-out': ('myfont' 'f195'),
+		'smiley': ('myfont' 'f196'),
+		'squirrel': ('myfont' 'f197'),
+		'star': ('myfont' 'f198'),
+		'stop': ('myfont' 'f199'),
+		'sync': ('myfont' 'f19a'),
+		'tag': ('myfont' 'f19b'),
+		'tasklist': ('myfont' 'f19c'),
+		'telescope': ('myfont' 'f19d'),
+		'terminal': ('myfont' 'f19e'),
+		'text-size': ('myfont' 'f19f'),
+		'three-bars': ('myfont' 'f1a0'),
+		'thumbsdown': ('myfont' 'f1a1'),
+		'thumbsup': ('myfont' 'f1a2'),
+		'tools': ('myfont' 'f1a3'),
+		'trashcan': ('myfont' 'f1a4'),
+		'triangle-down': ('myfont' 'f1a5'),
+		'triangle-left': ('myfont' 'f1a6'),
+		'triangle-right': ('myfont' 'f1a7'),
+		'triangle-up': ('myfont' 'f1a8'),
+		'unfold': ('myfont' 'f1a9'),
+		'unmute': ('myfont' 'f1aa'),
+		'unverified': ('myfont' 'f1ab'),
+		'verified': ('myfont' 'f1ac'),
+		'versions': ('myfont' 'f1ad'),
+		'watch': ('myfont' 'f1ae'),
+		'x': ('myfont' 'f1af'),
+		'zap': ('myfont' 'f1b0'),
+));
+
+@mixin webfont-icon($name) {
+	line-height: 1;
+
+	$icon: map-get($webfont-icons, $name);
+	&:before {
+		font-family: nth($icon, 1) !important;
+		font-style: normal;
+		font-weight: normal !important;
+		vertical-align: top;
+		content: str-slice('\x', 1, 1) + nth($icon, 2);
+	}
+}
+
+Hash: ffd2a3e768a318f7757f
+Version: webpack 3.3.0
+Time: 7482ms
+                                          Asset       Size  Chunks             Chunk Names
+            app.myfont.95a316263e141be0f383.eot    34.7 kB          [emitted]  
+           app.myfont.95a316263e141be0f383.woff    20.2 kB          [emitted]  
+          app.myfont.95a316263e141be0f383.woff2      17 kB          [emitted]  
+            app.myfont.95a316263e141be0f383.ttf    34.6 kB          [emitted]  
+            app.myfont.95a316263e141be0f383.svg     124 kB          [emitted]  
+                                  app.bundle.js       4 kB       0  [emitted]  main
+app.bundle.e049187e7dd4230b3ad2f9e5db5d42d8.css    6.69 kB       0  [emitted]  main
+                                     index.html  331 bytes          [emitted]  
+   [0] multi ./src/app.js 28 bytes {0} [built]
+   [1] ./src/app.js 51 bytes {0} [built]
+   [2] ./src/myfont.font.js 41 bytes {0} [built]
+   [3] ./src/app.scss 1.19 kB {0} [built] [failed] [1 error]
+
+ERROR in ./src/app.scss
+Module build failed: ModuleBuildError: Module build failed: 
+@import 'myfont';
+^
+      File to import not found or unreadable: myfont.
+Parent style sheet: stdin
+      in /Users/jeerbl/Projets/webfonts-loader/test/src/app.scss (line 1, column 1)
+    at runLoaders (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/webpack/lib/NormalModule.js:194:19)
+    at /Users/jeerbl/Projets/webfonts-loader/test/node_modules/loader-runner/lib/LoaderRunner.js:364:11
+    at /Users/jeerbl/Projets/webfonts-loader/test/node_modules/loader-runner/lib/LoaderRunner.js:230:18
+    at context.callback (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at Object.asyncSassJobQueue.push [as callback] (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/sass-loader/lib/loader.js:55:13)
+    at Object.<anonymous> (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/async/dist/async.js:2244:31)
+    at Object.callback (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/async/dist/async.js:906:16)
+    at options.error (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/node-sass/lib/index.js:294:32)
+ @ ./src/app.js 3:0-21
+ @ multi ./src/app.js
+
+ERROR in ./src/app.scss
+Module build failed: ModuleBuildError: Module build failed: 
+@import 'myfont';
+^
+      File to import not found or unreadable: myfont.
+Parent style sheet: stdin
+      in /Users/jeerbl/Projets/webfonts-loader/test/src/app.scss (line 1, column 1)
+    at runLoaders (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/webpack/lib/NormalModule.js:194:19)
+    at /Users/jeerbl/Projets/webfonts-loader/test/node_modules/loader-runner/lib/LoaderRunner.js:364:11
+    at /Users/jeerbl/Projets/webfonts-loader/test/node_modules/loader-runner/lib/LoaderRunner.js:230:18
+    at context.callback (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at Object.asyncSassJobQueue.push [as callback] (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/sass-loader/lib/loader.js:55:13)
+    at Object.<anonymous> (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/async/dist/async.js:2244:31)
+    at Object.callback (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/async/dist/async.js:906:16)
+    at options.error (/Users/jeerbl/Projets/webfonts-loader/test/node_modules/node-sass/lib/index.js:294:32)
+Child extract-text-webpack-plugin /Users/jeerbl/Projets/webfonts-loader/test/node_modules/extract-text-webpack-plugin/dist /Users/jeerbl/Projets/webfonts-loader/test/node_modules/css-loader/index.js!/Users/jeerbl/Projets/webfonts-loader/index.js!/Users/jeerbl/Projets/webfonts-loader/test/src/myfont.font.js:
+                                    Asset     Size  Chunks             Chunk Names
+      app.myfont.95a316263e141be0f383.eot  34.7 kB          [emitted]  
+     app.myfont.95a316263e141be0f383.woff  20.2 kB          [emitted]  
+    app.myfont.95a316263e141be0f383.woff2    17 kB          [emitted]  
+      app.myfont.95a316263e141be0f383.ttf  34.6 kB          [emitted]  
+      app.myfont.95a316263e141be0f383.svg   124 kB          [emitted]  
+       [0] ./node_modules/css-loader!..!./src/myfont.font.js 7.45 kB {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "index.html":
+       [0] ./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html 557 bytes {0} [built]
+       [2] (webpack)/buildin/global.js 509 bytes {0} [built]
+       [3] (webpack)/buildin/module.js 517 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin /Users/jeerbl/Projets/webfonts-loader/test/node_modules/extract-text-webpack-plugin/dist /Users/jeerbl/Projets/webfonts-loader/test/node_modules/css-loader/index.js!/Users/jeerbl/Projets/webfonts-loader/test/node_modules/sass-loader/lib/loader.js!/Users/jeerbl/Projets/webfonts-loader/test/src/app.scss:
+       [0] ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/app.scss 230 bytes {0} [built] [failed] [1 error]
+    
+    ERROR in ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/app.scss
+    Module build failed: 
+    @import 'myfont';
+    ^
+          File to import not found or unreadable: myfont.
+    Parent style sheet: stdin
+          in /Users/jeerbl/Projets/webfonts-loader/test/src/app.scss (line 1, column 1)
+Child extract-text-webpack-plugin /Users/jeerbl/Projets/webfonts-loader/test/node_modules/extract-text-webpack-plugin/dist /Users/jeerbl/Projets/webfonts-loader/test/node_modules/css-loader/index.js!/Users/jeerbl/Projets/webfonts-loader/test/node_modules/sass-loader/lib/loader.js!/Users/jeerbl/Projets/webfonts-loader/test/src/app.scss:
+       [0] ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/app.scss 230 bytes {0} [built] [failed] [1 error]
+    
+    ERROR in ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/app.scss
+    Module build failed: 
+    @import 'myfont';
+    ^
+          File to import not found or unreadable: myfont.
+    Parent style sheet: stdin
+          in /Users/jeerbl/Projets/webfonts-loader/test/src/app.scss (line 1, column 1)

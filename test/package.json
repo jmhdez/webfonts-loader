@@ -3,12 +3,18 @@
   "private": true,
   "main": "entry.js",
   "scripts": {
-    "test": "rimraf ./dist && ava -v ./ava.js && webpack"
+    "test": "rimraf ./dist && ava -v ./ava.js && webpack",
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "ava": "^0.21.0",
     "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
     "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"

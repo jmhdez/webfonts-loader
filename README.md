@@ -102,5 +102,8 @@ See [webfonts-generator#formatoptions](https://github.com/sunflowerdeath/webfont
 ##### `rename`, Function
 See [webfonts-generator#rename](https://github.com/sunflowerdeath/webfonts-generator#rename)
 
+##### `templateType`, String
+If set to `scss`, the option `cssTemplate` will be ignored and the loader will generate [`webfontsGenerator.templates.scss`](https://github.com/sunflowerdeath/webfonts-generator/blob/master/templates/scss.hbs) instead of a CSS file.
+
 ##### `types`, Array<String>
 See [webfonts-generator#types](https://github.com/sunflowerdeath/webfonts-generator#types)

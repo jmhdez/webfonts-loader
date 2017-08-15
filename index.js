@@ -116,6 +116,8 @@ module.exports = function (content) {
 
   if (config.cssTemplate) {
     generatorConfiguration.cssTemplate = path.resolve(this.context, config.cssTemplate);
+  } else if (config.templateType === 'scss') {
+    generatorConfiguration.cssTemplate = webfontsGenerator.templates.scss;
   }
 
   if (config.cssFontsPath) {
@@ -203,6 +205,8 @@ module.exports = function (content) {
           (Buffer.from(res[format]).toString('base64'));
       }
     }
-    cb(null, res.generateCss(urls));
+    var cssOrSassFile = res.generateCss(urls);
+    //console.log(cssOrSassFile);
+    cb(null, cssOrSassFile);
   });
 };
