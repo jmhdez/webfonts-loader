@@ -167,7 +167,7 @@ module.exports = function (content) {
       return cb(err);
     }
     var urls = {};
-    for (var i in formats) {
+    for (var i = 0; i < formats.length; i++) {
       var format = formats[i];
       var filename = config.fileName || params.fileName || '[chunkhash]-[fontname].[ext]';
       var chunkHash = filename.indexOf('[chunkhash]') !== -1
